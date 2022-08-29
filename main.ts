@@ -1,8 +1,8 @@
-let turns_green = 0
-let turns_red = 0
 input.onGesture(Gesture.Shake, function () {
-    turns_green = 0
+    strip.showColor(neopixel.colors(NeoPixelColors.Green))
 })
 input.onGesture(Gesture.TiltRight, function () {
-    turns_red = 0
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
+let strip: neopixel.Strip = null
+strip = neopixel.create(DigitalPin.P0, 15, NeoPixelMode.RGB)
